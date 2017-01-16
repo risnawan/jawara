@@ -29,6 +29,13 @@
 
                 <hr>
 
+                <?php foreach($sql->result() as $obj){
+                    $isi=$obj->isi_berita;
+                      }
+
+                 ?>
+                <?php echo $isi;?>
+
                 <!-- Post Content -->
                 <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.</p>
@@ -50,8 +57,39 @@
                 <!-- Posted Comments -->
 
                 <!-- Comment -->
-                <?php  $this->load->view($komentar);?>
 
+                
+                <div class="comments-container">
+                <h1>Komentar</h1>
+                <?php foreach ($komentar->result() as $kom) { ?>
+                <ul id="comments-list" class="comments-list">
+                <li>
+                <div class="comment-main-level">
+                    <!-- Avatar -->
+                    <div class="comment-avatar"><img src="http://i9.photobucket.com/albums/a88/creaticode/avatar_1_zps8e1c80cd.jpg" alt=""></div>
+                    <!-- Contenedor del Comentario -->
+                    <div class="comment-box">
+                        <div class="comment-head">
+                            <h6 class="comment-name by-author"><a href="#">><?php echo $kom->id_pengguna; ?></a></h6>
+                            <span>><?php echo $kom->waktu; ?></span>
+                            <i class="fa fa-reply"></i>
+                            <i class="fa fa-heart"></i>
+                        </div>
+                        <div class="comment-content">
+                            <?php echo $kom->isi_komentar; ?>
+                        </div>
+                    </div>
+                </div>
+                <!-- Respuestas de los comentarios -->
+                
+            </li>
+        </ul>
+        <?php } ?>
+    </div>
+
+
+                <!-- Comment -->
+  
             </div>
 
             <!-- Blog Sidebar Widgets Column -->
