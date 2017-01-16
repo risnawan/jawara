@@ -10,3 +10,7 @@
       <p> <?php echo "ini untuk bagian footer"; ?></p>
     </div>
   </footer>
+      <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
