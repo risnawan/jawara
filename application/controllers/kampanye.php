@@ -1,11 +1,11 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Pengguna extends CI_Controller {
+class Kampanye extends CI_Controller {
 
 	function __construct() {
         parent::__construct();
-        $this->load->model('m_pengguna');
+        $this->load->model('m_kampanye');
         if($this->session->userdata('status') != "login"){
 			redirect('Admin');
 		}
@@ -13,9 +13,9 @@ class Pengguna extends CI_Controller {
 
 	public function index()
 	{
-		$data['query'] = $this->m_pengguna->getpengguna();
+		$data['query'] = $this->m_kampanye->getkampanye();
 		
-		$data['content'] = 'admin/content/d_pengguna';
+		$data['content'] = 'admin/content/d_kampanye';
 		$this->load->view('admin/home',$data);
 	}
 
