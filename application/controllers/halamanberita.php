@@ -21,4 +21,19 @@ class Halamanberita extends CI_Controller {
 		$this->load->view('berita/footer');
 	}
 
+	public function berita($id)
+	{
+		$data['content'] = 'berita/seputarkampanye';
+		$data['tuliskometar'] = 'berita/tinggalkankomentar';
+		$data['komentar'] = 'berita/komentar';
+		$this->load->model('m_admin');
+		$this->load->view('berita/header');
+		$this->load->view('berita/berita', $data);
+		$this->load->view('berita/footer');
+
+
+	}
+
+
+
 }

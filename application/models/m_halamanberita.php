@@ -20,6 +20,7 @@ class M_halamanberita extends CI_Model {
 		$this->db->insert('komentar',$data);
 	}
 
+	
 	function getupdate($key,$data){
 		$this->db->where('id_berita',$key);
 		$this->db->update('berita',$data);
