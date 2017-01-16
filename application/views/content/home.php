@@ -115,7 +115,7 @@
           <li>
             <div class="imgholder"><img src="images/demo/imgl.gif" alt="" /></div>
             <div class="latestnews">
-            <p>tanggal, penulis</p>
+            <p>15.00 WIB, 16 Januari 2017 | Jawara News</p>
               <h2>About This Template !</h2>
               <p>This is a W3C asdasdasdads asdasdasdasdsadasdasda asdasdasdasdasdasd asdasdadsadsasdasdasd asdasdasdasdsad asdasdasda asdasdasdsad adsadasdasdasd adsasdasdadsasd sdsdsdsdsd sdsdsdsds sdsdssdd stanacascasc asasjdajsd asdasdljlkasd asdlklaksndlasdkn lasnldansldansdlasd jasldjasldjasd laksndlkansldansldalsd lkanldsdfsdfsdfsdfsfdsdfsfdsdfs sdfsfdsdfsfdksbfdks kjksdjfskdf ksdkfsjdkfsj ksdkfsjdkfsjfd ksjdfksjdf sdfsdflsdflkslfdsldfksldf lksdlfskdflskdf sdfsdlfskfdhl sdkanlsdkasd lkansdlaksdlaksdn lansdlaksd lknlasdsd dards compliant free website template from <a href="http://www.os-templates.com/">OS Templates</a>. This template is distributed using a <a href="http://www.os-templates.com/template-terms">Website Template Licence</a>, which allows you to use and modify the template for both personal and commercial use when you keep the provided credit links in the footer. For more CSS templates visit <a href="http://www.os-templates.com/">Free Website Templates</a>.</p>
               <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
