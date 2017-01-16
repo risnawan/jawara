@@ -1,0 +1,1 @@
+<?php echo "ini untuk bagian sisi kanan seputar kampanye"; ?>
