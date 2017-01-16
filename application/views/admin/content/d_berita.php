@@ -1,7 +1,8 @@
 
 
-
-<table class="table table-hover table-bordered">
+<div class="box">
+<div class="box-body">
+<table id="example2" class="table table-bordered table-hover">
 	<tr>
 	<th width="5%">No</th>
 	<th width="20%">Judul</th>
@@ -26,3 +27,10 @@
 		<?php }
 	?>
 </table>
+
+</div>
+</div>
+
+
+
+
