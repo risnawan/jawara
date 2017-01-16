@@ -348,8 +348,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="#"><i class="fa fa-circle-o"></i>Daftar Kampanye</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i>Post Kampanye</a></li>
+            <li class="active"><a href="<?php echo base_url()?>index.php/kampanye"><i class="fa fa-circle-o"></i>Daftar Kampanye</a></li>
+            <li><a href="<?php echo base_url()?>index.php/kampanye/add"><i class="fa fa-circle-o"></i>Post Kampanye</a></li>
           </ul>
         </li>
 
