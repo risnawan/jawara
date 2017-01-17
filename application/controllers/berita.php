@@ -19,6 +19,27 @@ class Berita extends CI_Controller {
 		$this->load->view('admin/home',$data);
 	}
 
+	// public function page()
+	// {
+	// 	$this->load->libary('pagination');
+	// 	$this->load->model('table');
+
+	// 	$this->db->select('counrty, year, hscode_level, hs_version, hscode, hscode_description');
+
+	// 	$data['base_url'] = '/hs_codes/page/';
+	// 	$data['total_rows'] = $this->db->get('applied_mfn')->num_rows();
+	// 	$data['per_page'] = 30;
+	// 	$data['num_links'] = 10;
+	// 	$data['records'] = $this->db->select('counrty, year, hscode_level, hs_version, hscode, hscode_description')->get('applied_mfn', $data['per_page'], $this->url->segment(3));
+	// 	$data['toc'] = $this->model_hscodes->get_toc();
+
+	// 	$this->pagination->initialize($data);
+
+	// 	$this->load->view('includes/harder',$header);
+	// 	$this->load->view('hs_codes/view_hs_codes',$data);
+	// 	$this->load->view('includes/footer');
+	// }
+
 	public function add()
 	{
 		$data['id_berita'] = '';
