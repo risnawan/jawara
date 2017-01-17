@@ -38,9 +38,31 @@ class Halamanberita extends CI_Controller {
 		$this->load->view('berita/berita', $data);
 		$this->load->view('berita/footer');
 
-
 	}
 
+	public function tinggalpesan()
+	{
+		//$key  = $this->input->post('id_berita');
+		$data['id_pengguna']= $this->input->post('username_admin');
+		$data['id_komentar']= $this->input->post('judul_berita');
+		$data['id_berita']= $this->input->post('tanggal_berita');
+		$data['isi_komentar']= $this->input->post('isi_berita');
+		$data['waktu']= $this->input->post('isi_berita');
+		
+
+		
+		$query = $this->m_berita->getdata($key);
+	
+		if ($query->num_rows()>0) {
+			$this->m_berita->getupdate($key,$data);
+		}
+		else
+		{
+			$this->m_berita->getinsert($data);
+		}
+
+		redirect('berita/add');
+	}
 
 
 }
