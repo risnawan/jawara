@@ -5,6 +5,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Halaman Admin</title>
+    <link rel="stylesheet" href="<?php echo base_url()."assets1/";?>plugins/datatables/datatables.bootstrap.css">
+
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -348,8 +350,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="#"><i class="fa fa-circle-o"></i>Daftar Kampanye</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i>Post Kampanye</a></li>
+            <li class="active"><a href="<?php echo base_url()?>index.php/kampanye"><i class="fa fa-circle-o"></i>Daftar Kampanye</a></li>
+            <li><a href="<?php echo base_url()?>index.php/kampanye/add"><i class="fa fa-circle-o"></i>Post Kampanye</a></li>
           </ul>
         </li>
 
@@ -625,5 +627,24 @@
 <script src="<?php echo base_url()."assets1/";?>dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo base_url()."assets1/";?>dist/js/demo.js"></script>
+<script src="<?php echo base_url()."assets1/";?>plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="<?php echo base_url()."assets1/";?>plugins/datatables/dataTables.bootstrap.min.js"></script>
+
+<script>
+  $(function () {
+    $("#example1").DataTable();
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false
+    });
+  });
+</script>
+
+
+
 </body>
 </html>
