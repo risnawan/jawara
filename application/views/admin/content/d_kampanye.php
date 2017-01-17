@@ -1,5 +1,6 @@
 
-
+<div class="box">
+<div class="box-body">
 
 <table class="table table-hover table-bordered">
 	<tr>
@@ -32,3 +33,4 @@
 		<?php }
 	?>
 </table>
+</div></div>
