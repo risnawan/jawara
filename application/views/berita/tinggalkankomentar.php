@@ -1,3 +1,6 @@
+
+<?php //if(data) ?>
+
 <h4>Leave a Comment:</h4>
                     <form role="form">
                         <div class="form-group">
