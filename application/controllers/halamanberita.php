@@ -24,7 +24,7 @@ class Halamanberita extends CI_Controller {
 		$this->load->view('berita/footer');
 	}
 
-	public function berita($id)
+	public function berita($id=1)
 	{
 		//$query = $this->m_halamanberita->getkomentar($id);
 
