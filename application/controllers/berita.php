@@ -77,6 +77,25 @@ class Berita extends CI_Controller {
 		redirect('berita');
 	}
 
+	public function news()
+	{
+		$op=$this->input->post('op');
+		$waktu=$this->input->post('waktu');
+		$judul=$this->input->post('judul_berita');
+		$foto=$this->input->post('foto_berita');
+		$isi=$this->input->post('isi_berita');
+		$data=array(
+			'waktu'=>$waktu,
+			'judul_berita'=>$judul,
+			'foto_berita'=>$foto,
+			'isi_berita'=>$isi);
+		if ($op=>"tambah"){
+			$this->home->news($data);
+		}else{
+		redirect('berita/index');
+		}
+	}
+
 	public function save(){
 		
 		$key  = $this->input->post('id_berita');
