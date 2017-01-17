@@ -4,8 +4,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class M_halamanberita extends CI_Model {
 
 	public function getberita($key){
-		$this->db->where('id_berita',$key);
-		$hasil = $this->db->get('berita');
+		$this->db->select('*');
+		$this->db->from('berita');
+		$this->db->join('admin', 'berita.username_admin = admin.username_admin');
+		$this->db->where('berita.id_berita',$key);
+		$hasil = $this->db->get();
 		return $hasil;
 	}
 
@@ -15,7 +18,7 @@ class M_halamanberita extends CI_Model {
 		return $hasil;
 	}
 
-	public function setKomentar()
+	public function insertkomentar($data)
 	{
 		$this->db->insert('komentar',$data);
 	}

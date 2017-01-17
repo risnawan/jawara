@@ -1,4 +1,23 @@
 
+<?php 
+    $judul="";
+    $waktu="";
+    $penulis="";
+    $foto="";
+    $isi="";
+
+foreach($sql->result() as $obj){
+    $judul=$obj->judul_berita;
+    $waktu=$obj->waktu;
+    $penulis=$obj->nama_lengkap;
+    $foto=$obj->foto;
+    $isi=$obj->isi_berita;
+
+    }
+
+?>
+   
+
     <!-- Page Content -->
     <div class="container">
 
@@ -10,46 +29,41 @@
                 <!-- Blog Post -->
 
                 <!-- Title -->
-                <h1>Blog Post Title</h1>
+                <h1><?php echo $judul; ?></h1>
 
                 <!-- Author -->
                 <p class="lead">
-                    by <a href="#">Start Bootstrap</a>
+                    by <a href="#"><?php echo $penulis; ?></a>
                 </p>
 
                 <hr>
 
                 <!-- Date/Time -->
-                <p><span class="glyphicon glyphicon-time"></span> Posted on August 24, 2013 at 9:00 PM</p>
+                <p><span class="glyphicon glyphicon-time"></span> Posted on <?php echo $waktu; ?></p>
 
                 <hr>
 
                 <!-- Preview Image -->
-                <img class="img-responsive" src="http://placehold.it/900x300" alt="">
-
+                <img class="img-responsive" src="<?php echo base_url()."assets/images/";?>photograph_img2.jpg" alt="" style="width:900px;height:300px;">
                 <hr>
 
-                <?php foreach($sql->result() as $obj){
-                    $isi=$obj->isi_berita;
-                      }
-
-                 ?>
-                <?php echo $isi;?>
-
                 <!-- Post Content -->
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!</p>
-
+                <p class="lead"></p>
+                <font face="verdana" color="black"><?php echo $isi;?></font>
                 <hr>
 
                 <!-- Blog Comments -->
 
                 <!-- Comments Form -->
                 <div class="well">
-                    <?php  $this->load->view($tuliskometar);?>
+                    <h4>Leave a Comment:</h4>
+                    <form role="form" method="POST" action="<?php echo base_url();?>halamanberita/berita/tinggalpesan">
+                        <div class="form-group">
+                        <input type="textarea" name="isi_komentar" rows="3" class="form-control">
+                            
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
                 </div>
 
                 <hr>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>NewsFeed</title>
+<title>JawaraNews.com</title>
 <meta charset="utf-8">
 
 <!-- css -->
@@ -107,17 +107,24 @@
           <div class="single_post_content">
             
             <h2><span></span></h2>
+
+
 <div id="latestnews">
         <h2>Berita</h2>
-        
+        <?php
+          $waktu="23:00 WIB, 18 Januari 2017 | JawaraNews";
+          $op="";
+          $judul="Agus & Sylvi Membuat Aplikasi Demi Mengantisipasi Kecurangan";
+          $isi="Jakarta - Pasangan nomor urut 1 di Pilgub DKI 2017, Agus Yudhoyono-Sylviana Murni membuat aplikasi berbasis IT untuk mengantisipasi kecurangan menjelang proses pencoblosan. Aplikasi tidak hanya ditujukan untuk relawan melainkan juga warga pada umumnya.";
+        ?>
         <ul>
-        <?php for($i = 0; $i < 10; $i++) {?>
+        <?php for($i = 0; $i < 6; $i++) {?>
           <li>
             <div class="imgholder"><img src="images/demo/imgl.gif" alt="" /></div>
-            <div class="latestnews">
-            <p>15.00 WIB, 16 Januari 2017 | Jawara News</p>
-              <h2>About This Template !</h2>
-              <p>This is a W3C asdasdasdads asdasdasdasdsadasdasda asdasdasdasdasdasd asdasdadsadsasdasdasd asdasdasdasdsad asdasdasda asdasdasdsad adsadasdasdasd adsasdasdadsasd sdsdsdsdsd sdsdsdsds sdsdssdd stanacascasc asasjdajsd asdasdljlkasd asdlklaksndlasdkn lasnldansldansdlasd jasldjasldjasd laksndlkansldansldalsd lkanldsdfsdfsdfsdfsfdsdfsfdsdfs sdfsfdsdfsfdksbfdks kjksdjfskdf ksdkfsjdkfsj ksdkfsjdkfsjfd ksjdfksjdf sdfsdflsdflkslfdsldfksldf lksdlfskdflskdf sdfsdlfskfdhl sdkanlsdkasd lkansdlaksdlaksdn lansdlaksd lknlasdsd dards compliant free website template from <a href="http://www.os-templates.com/">OS Templates</a>. This template is distributed using a <a href="http://www.os-templates.com/template-terms">Website Template Licence</a>, which allows you to use and modify the template for both personal and commercial use when you keep the provided credit links in the footer. For more CSS templates visit <a href="http://www.os-templates.com/">Free Website Templates</a>.</p>
+              <p><?php echo $waktu;?></p>
+              <p><?php echo $op;?></p>
+              <h2><?php echo $judul;?></h2>
+              <p><?php echo $isi;?></p>
               <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
             </div>
             <br class="clear" />
