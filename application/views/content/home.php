@@ -107,20 +107,7 @@
           <div class="single_post_content">
             
             <h2><span></span></h2>
-<?php
-  $waktu="";
-  $judul="";
-  $foto="";
-  $isi="";
-  
-    foreach($sql->result() as $obj){
-      $op="edit";
-      $no=$obj->waktu;
-      $npm=$obj->judul_berita;
-      $nama=$obj->foto_berita;
-      $nilai=$obj->isi_berita;
-    }
-?>
+
 
 <div id="latestnews">
         <h2>Berita</h2>
@@ -129,10 +116,22 @@
         <?php for($i = 0; $i < 6; $i++) {?>
           <li>
             <div class="imgholder"><img src="images/demo/imgl.gif" alt="" /></div>
-            <div class="latestnews">
-            <p><php echo $waktu;></p>
-              <h2>About This Template !</h2>
-              <p>This is a W3C asdasdasdads asdasdasdasdsadasdasda asdasdasdasdasdasd asdasdadsadsasdasdasd asdasdasdasdsad asdasdasda asdasdasdsad adsadasdasdasd adsasdasdadsasd sdsdsdsdsd sdsdsdsds sdsdssdd stanacascasc asasjdajsd asdasdljlkasd asdlklaksndlasdkn lasnldansldansdlasd jasldjasldjasd laksndlkansldansldalsd lkanldsdfsdfsdfsdfsfdsdfsfdsdfs sdfsfdsdfsfdksbfdks kjksdjfskdf ksdkfsjdkfsj ksdkfsjdkfsjfd ksjdfksjdf sdfsdflsdflkslfdsldfksldf lksdlfskdflskdf sdfsdlfskfdhl sdkanlsdkasd lkansdlaksdlaksdn lansdlaksd lknlasdsd dards compliant free website template from <a href="http://www.os-templates.com/">OS Templates</a>. This template is distributed using a <a href="http://www.os-templates.com/template-terms">Website Template Licence</a>, which allows you to use and modify the template for both personal and commercial use when you keep the provided credit links in the footer. For more CSS templates visit <a href="http://www.os-templates.com/">Free Website Templates</a>.</p>
+            <form role="form" action="<?php echo base_url();?>berita/news" method="POST">
+              <div class="latestnews">
+                  <input type="hidden" name="op" value="<?php echo $op?>" class="form-control" placeholder="op">
+                   <label>Waktu</label>
+                    <input type="date" name="waktu" value="<?php echo $waktu?>" class="form-control" placeholder="Waktu">
+                    <label>Judul Berita</label>
+                    <input type="text" name="judul_berita" value="<?php echo $judul?>" class="form-control" placeholder="Judul_Berita">
+              </div>
+             <!--  <div class="form-group">
+                    <label>Foto Berita</label>
+                    <input type="text" name="nama" value="<?php echo $nama?>" class="form-control" placeholder="Nama Mahasiswa">
+              </div> -->
+              <div class="form-group">
+                    <label>Isi Berita</label>
+                    <input type="text" name="isi_berita" value="<?php echo $isi?>" class="form-control" placeholder="Isi_Berita">
+              </div>
               <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
             </div>
             <br class="clear" />
