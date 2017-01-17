@@ -9,11 +9,11 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Blog Post - Start Bootstrap Template</title>
+    <title>Jawara News</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url()."assets/";?>css/bootstrap.min.css">
-
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url()."assets/";?>css/komentar.css">
     <!-- Custom CSS -->
     <link href="<?php echo base_url()."assets/";?>css/blog-post.css" rel="stylesheet">
 
@@ -26,6 +26,7 @@
 
    
     
+<link rel="stylesheet" type="text/css" href="<?php echo base_url()."assets/";?>css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url()."assets/";?>css/font.css">
     <!--
     untuk tema warna
