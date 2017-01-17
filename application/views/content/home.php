@@ -111,27 +111,20 @@
 
 <div id="latestnews">
         <h2>Berita</h2>
-        
+        <?php
+          $waktu="23:00 WIB, 18 Januari 2017 | JawaraNews";
+          $op="";
+          $judul="Agus & Sylvi Membuat Aplikasi Demi Mengantisipasi Kecurangan";
+          $isi="Jakarta - Pasangan nomor urut 1 di Pilgub DKI 2017, Agus Yudhoyono-Sylviana Murni membuat aplikasi berbasis IT untuk mengantisipasi kecurangan menjelang proses pencoblosan. Aplikasi tidak hanya ditujukan untuk relawan melainkan juga warga pada umumnya.";
+        ?>
         <ul>
         <?php for($i = 0; $i < 6; $i++) {?>
           <li>
             <div class="imgholder"><img src="images/demo/imgl.gif" alt="" /></div>
-            <form role="form" action="<?php echo base_url();?>berita/news" method="POST">
-              <div class="latestnews">
-                  <input type="hidden" name="op" value="<?php echo $op?>" class="form-control" placeholder="op">
-                   <label>Waktu</label>
-                    <input type="date" name="waktu" value="<?php echo $waktu?>" class="form-control" placeholder="Waktu">
-                    <label>Judul Berita</label>
-                    <input type="text" name="judul_berita" value="<?php echo $judul?>" class="form-control" placeholder="Judul_Berita">
-              </div>
-             <!--  <div class="form-group">
-                    <label>Foto Berita</label>
-                    <input type="text" name="nama" value="<?php echo $nama?>" class="form-control" placeholder="Nama Mahasiswa">
-              </div> -->
-              <div class="form-group">
-                    <label>Isi Berita</label>
-                    <input type="text" name="isi_berita" value="<?php echo $isi?>" class="form-control" placeholder="Isi_Berita">
-              </div>
+              <p><?php echo $waktu;?></p>
+              <p><?php echo $op;?></p>
+              <h2><?php echo $judul;?></h2>
+              <p><?php echo $isi;?></p>
               <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
             </div>
             <br class="clear" />
