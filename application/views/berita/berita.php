@@ -57,9 +57,10 @@ foreach($sql->result() as $obj){
                 <!-- Comments Form -->
                 <div class="well">
                     <h4>Leave a Comment:</h4>
-                    <form role="form">
+                    <form role="form" method="POST" action="<?php echo base_url();?>halamanberita/berita/tinggalpesan">
                         <div class="form-group">
-                            <textarea class="form-control" rows="3"></textarea>
+                        <input type="textarea" name="isi_komentar" rows="3" class="form-control">
+                            
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>

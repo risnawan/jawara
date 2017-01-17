@@ -18,7 +18,7 @@ class M_halamanberita extends CI_Model {
 		return $hasil;
 	}
 
-	public function insertkomentar()
+	public function insertkomentar($data)
 	{
 		$this->db->insert('komentar',$data);
 	}
