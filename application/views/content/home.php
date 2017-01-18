@@ -102,20 +102,23 @@
  
 	<!-- bagian kiri -->
     <div class="row">
-      <div class="col-lg-8 col-md-8 col-sm-8">
+      <div class="col-lg-7 col-md-5 col-sm-13">
         <div class="left_content">
           <div class="single_post_content">
-            
-            <h2><span></span></h2>
+         
+            <h2><span>Berita Terkini</span></h2>
 
 
 <div id="latestnews">
-        <h2>Berita</h2>
         <?php
-          $waktu="23:00 WIB, 18 Januari 2017 | JawaraNews";
-          $op="";
-          $judul="Agus & Sylvi Membuat Aplikasi Demi Mengantisipasi Kecurangan";
-          $isi="Jakarta - Pasangan nomor urut 1 di Pilgub DKI 2017, Agus Yudhoyono-Sylviana Murni membuat aplikasi berbasis IT untuk mengantisipasi kecurangan menjelang proses pencoblosan. Aplikasi tidak hanya ditujukan untuk relawan melainkan juga warga pada umumnya.";
+          $waktu= "20:15 WIB, 13 Januari 2017 | JawaraNews";
+          $op= "";
+          $judul= "Debat Pilkada Cagub Menghebohkan Warga Jakarta";
+          $isi= "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaabbbbmdlmgkdnj gfshdsjfnadnfjdnfkdnafknadfnk
+          andfkdnfkndsf ndsnfdsnv dnfkendfds vmcvjdsbfkasnfdksbfafeifnjdv djfbebfd vm vjdbfafsdmacks
+          nfknsaklfnkasncdx vdjaf adv djv kdfdsfdsfsd ewfdfdasdfsd sfsdfsdsfd cairo_status(sfsfsfs m 
+          dfsdfs df s)fsdfsdfdfnqjndsnfjkebnd  dnnfdkalnf dnklafak fndkl fa,mfnakf esacsacsascacacac
+          ascascascascacsaccsacacacsacdbf fbfdbv fbfbvd dfsdvsc fv dfbd fbdfgsdfsbvf dbd dbfgfdsvdfg";
         ?>
         <ul>
         <?php for($i = 0; $i < 6; $i++) {?>
@@ -123,36 +126,19 @@
             <div class="imgholder"><img src="images/demo/imgl.gif" alt="" /></div>
               <p><?php echo $waktu;?></p>
               <p><?php echo $op;?></p>
-              <h2><?php echo $judul;?></h2>
+              <h3><?php echo $judul;?></h3>
               <p><?php echo $isi;?></p>
               <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
-            </div>
-            <br class="clear" />
           </li>
           <?php }?>
         </ul>
-      </div>
-    </div>
-              </div>
-        </div>
-      	  <!-- bagian kiri -->
-
-
-	  <!-- bagian kanan -->
-      <div class="col-lg-4 col-md-4 col-sm-4">
-        <aside class="right_content">
-          
-		  
-		   
-    
-        
-          <h3><span>Informasi Seputar Kampanye</span></h3>
-         
-
-          <div class="latest_post_container">
-
+    <!-- bagian kanan -->
+      
+      <div class="col-lg-7 col-md-5 col-sm-10">
+        <div class="right_content">
+          <h2><span>Informasi Seputar Kampanye</span></h2>
             <div id="prev-button"><i class="fa fa-chevron-up"></i></div>
-
+              <div class="latest_post_container">
             <ul class="latest_postnav">
             <?php for($u = 0; $u < 5; $u++) {?>
               <li>
