@@ -80,6 +80,7 @@
                         </form>
                     </li>
                     <li>
+
                     	<button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#login-modal">Sign in</button>
                     </li>
 
@@ -108,7 +109,8 @@
                 <div id="div-forms">
                 
                     <!-- Begin # Login Form -->
-                    <form id="login-form">
+                    <form id="login-form" action="<?php echo base_url();?>home/login" method="post" >
+                    
                     <div class="modal-body">
                 <div id="div-login-msg">
                                 <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
@@ -124,9 +126,10 @@
                   </div>
                 <div class="modal-footer">
                             <div>
-                                <button type="submit" class="btn btn-primary btn-lg btn-block">Login</button>
+                            
+                                <input type="submit" class="btn btn-primary btn-lg btn-block" value="Login">
                             </div>
-                  <div>
+                                
                                 <button id="login_lost_btn" type="button" class="btn btn-link">Lost Password?</button>
                                 <button id="login_register_btn" type="button" class="btn btn-link">Register</button>
                             </div>
@@ -148,7 +151,8 @@
                                 <button type="submit" class="btn btn-primary btn-lg btn-block">Send</button>
                             </div>
                             <div>
-                                <button id="lost_login_btn" type="button" class="btn btn-link">Log In</button>
+
+                                <button  id="lost_login_btn" type="button" class="btn btn-link">Log In</button>
                                 <button id="lost_register_btn" type="button" class="btn btn-link">Register</button>
                             </div>
                 </div>

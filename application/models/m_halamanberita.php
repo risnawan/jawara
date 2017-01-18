@@ -21,9 +21,33 @@ class M_halamanberita extends CI_Model {
 	}
 
 	public function getkomentar($key){
-		$this->db->where('id_berita',$key);
-		$hasil = $this->db->get('komentar');
-		return $hasil;
+		
+		return $this->db->query("SELECT
+				komentar.id_pengguna,
+				komentar.id_komentar,
+				komentar.id_berita,
+				komentar.isi_komentar,
+				komentar.waktu,
+				pengguna.username,
+				pengguna.nama_lengkap,
+				pengguna.email,
+				pengguna.foto,
+				pengguna.`password`,
+				pengguna.id_pengguna,
+				berita.id_berita,
+				berita.username_admin,
+				berita.judul_berita,
+				berita.waktu,
+				berita.isi_berita,
+				berita.img
+				FROM
+				komentar
+				INNER JOIN pengguna ON pengguna.id_pengguna = komentar.id_pengguna
+				INNER JOIN berita ON berita.id_berita = komentar.id_berita 
+				Where 
+				berita.id_berita ='$key' ;");
+
+
 	}
 
 	public function insertkomentar($data)

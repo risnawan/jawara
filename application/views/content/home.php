@@ -120,7 +120,7 @@
             <p><?php echo $berita->waktu; ?>, <?php echo $berita->username_admin; ?></p>
               <a href=""><h2><?php echo $berita->judul_berita; ?></h2></a>
               <p><?php echo $berita->isi_berita; ?></p>
-              <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
+              <p class="readmore"><a href="<?php echo base_url();?>halamanberita/berita/<?php echo $berita->id_berita;?>">Continue Reading &raquo;</a></p>
             </div>
             <br class="clear" />
           </li>
@@ -235,7 +235,7 @@
     </div>
     <div class="footer_bottom">
       <p class="copyright">Copyright &copy; 2016 <a href="index.html">NewsFeed</a></p>
-      <p class="developer">Dikembangkan oleh Kelompok 7</p>
+      <p class="developer">Dikembangkan oleh oke je Kelompok 7</p>
     </div>
   </footer>
   <!-- bagian bawah-->
