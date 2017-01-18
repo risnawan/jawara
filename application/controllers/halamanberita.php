@@ -24,7 +24,7 @@ class Halamanberita extends CI_Controller {
 		$this->load->view('berita/footer');
 	}
 
-	public function berita($id=1)
+	public function berita()
 	{
 		//$query = $this->m_halamanberita->getkomentar($id);
 
@@ -35,12 +35,14 @@ class Halamanberita extends CI_Controller {
 
 
 
-
+		$key= $this->uri->segment(3);
 		$data['content'] = 'berita/seputarkampanye';
 		$data['tuliskometar'] = 'berita/tinggalkankomentar';
 		//$data['komentar'] = 'berita/komentar';
-		$data['sql'] = $this->m_halamanberita->getberita($id);
-		$data['komentar'] = $this->m_halamanberita->getkomentar($id);
+		$data['sql'] = $this->m_halamanberita->getberita($key);
+		$data['komentar'] = $this->m_halamanberita->getkomentar($key);
+		
+
 		$this->load->view('berita/header');
 		$this->load->view('berita/berita', $data);
 		$this->load->view('berita/footer');
