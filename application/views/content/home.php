@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>JawaraNews.com</title>
+
 <meta charset="utf-8">
 
 <!-- css -->
@@ -9,12 +10,8 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url()."assets/";?>css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url()."assets/";?>css/animate.css">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url()."assets/";?>css/font.css">
-<link rel="stylesheet" type="text/css" href="<?php echo base_url()."assets/";?>css/li-scroller.css">
-<link rel="stylesheet" type="text/css" href="<?php echo base_url()."assets/";?>css/slick.css">
-<link rel="stylesheet" type="text/css" href="<?php echo base_url()."assets/";?>css/jquery.fancybox.css">
-<link rel="stylesheet" type="text/css" href="<?php echo base_url()."assets/";?>css/theme.css">
+
 <link rel="stylesheet" type="text/css" href="<?php echo base_url()."assets/";?>css/style.css">
-<link rel="stylesheet" type="text/css" href="<?php echo base_url()."assets/";?>css/layout.css">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url()."assets/";?>css/login.css">
 
 <!-- css -->
@@ -36,6 +33,7 @@
  
     <div class="row">
       
+
         <div class="header_top">
           <div class="header_top_left">
             <ul class="top_nav">
@@ -61,8 +59,15 @@
    
     <!-- logo pencarian dan login -->
 
-    <!-- logo pencarian dan login -->
+                </ul>
 
+            </div>
+
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <br>
 
   <!-- Bagian baris berita utam image slider -->
   <section id="sliderSection">
@@ -126,7 +131,7 @@
             <p><?php echo $berita->waktu; ?>, <?php echo $berita->username_admin; ?></p>
               <a href=""><h2><?php echo $berita->judul_berita; ?></h2></a>
               <p><?php echo $berita->isi_berita; ?></p>
-              <p class="readmore"><a href="<?php echo base_url();?>halamanberita/berita/<?php echo $berita->id_berita;?>">Continue Reading &raquo;</a></p>
+              <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
             </div>
             <br class="clear" />
           </li>
@@ -234,16 +239,12 @@
 
 <!-- bagian bawah-->
   <footer id="footer">
-    <div class="footer_top">
-      <div class="row">
-        
-      </div>
-    </div>
     <div class="footer_bottom">
       <p class="copyright">Copyright &copy; 2016 <a href="index.html">NewsFeed</a></p>
-      <p class="developer">Dikembangkan oleh oke je Kelompok 7</p>
+      <p class="developer">Dikembangkan oleh Kelompok 7</p>
     </div>
   </footer>
+
   <!-- bagian bawah-->
 <script src="<?php echo base_url()."assets/";?>js/jquery.min.js"></script> 
 <script src="<?php echo base_url()."assets/";?>js/wow.min.js"></script> 
@@ -254,6 +255,7 @@
 <script src="<?php echo base_url()."assets/";?>js/jquery.fancybox.pack.js"></script> 
 <script src="<?php echo base_url()."assets/";?>js/custom.js"></script>
 <script src="<?php echo base_url()."assets/";?>js/login.js"></script>
+
 <!-- BEGIN # MODAL LOGIN -->
 <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
       <div class="modal-dialog">
