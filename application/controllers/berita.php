@@ -89,7 +89,7 @@ class Berita extends CI_Controller {
 			'judul_berita'=>$judul,
 			'foto_berita'=>$foto,
 			'isi_berita'=>$isi);
-		if ($op=>"tambah"){
+		if ($op="tambah"){
 			$this->home->news($data);
 		}else{
 		redirect('berita/index');
