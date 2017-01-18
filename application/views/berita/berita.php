@@ -12,7 +12,6 @@ foreach($sql->result() as $obj){
     $penulis=$obj->nama_lengkap;
     $foto=$obj->foto;
     $isi=$obj->isi_berita;
-
     }
 
 ?>
@@ -57,13 +56,9 @@ foreach($sql->result() as $obj){
                 <!-- Comments Form -->
                 <div class="well">
                     <h4>Leave a Comment:</h4>
-                    <form role="form" method="POST" action="<?php echo base_url();?>halamanberita/berita/tinggalpesan">
-                        <div class="form-group">
-                        <input type="textarea" name="isi_komentar" rows="3" class="form-control">
-                            
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
+
+                    <?php $this->load->view($tuliskometar); ?>
+
                 </div>
 
                 <hr>
@@ -84,8 +79,8 @@ foreach($sql->result() as $obj){
                     <!-- Contenedor del Comentario -->
                     <div class="comment-box">
                         <div class="comment-head">
-                            <h6 class="comment-name by-author"><a href="#">><?php echo $kom->id_pengguna; ?></a></h6>
-                            <span>><?php echo $kom->waktu; ?></span>
+                            <h6 class="comment-name"><a href="#"><?php echo $kom->id_pengguna; ?></a></h6>
+                            <span><?php echo $kom->waktu; ?></span>
                             <i class="fa fa-reply"></i>
                             <i class="fa fa-heart"></i>
                         </div>

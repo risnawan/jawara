@@ -1,8 +1,12 @@
 
-<?php //if(data) ?>
+<?php /*if(data)
+ 
+ jika sudah login maka tampilkan form  tinggalkan pesan nya 
+ jika tidak maka tampilkan button login dengan modal seperti di header
 
-<h4>Leave a Comment:</h4>
-                    <form role="form">
+ */?>
+
+                    <form role="form" method="POST" action="<?php echo base_url();?>halamanberita/berita/tinggalpesan">
                         <div class="form-group">
                             <textarea class="form-control" rows="3"></textarea>
                         </div>
