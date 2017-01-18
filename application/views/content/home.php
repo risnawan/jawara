@@ -37,19 +37,22 @@
     <div class="row">
       
         <div class="header_top">
-          
+          <div class="header_top_left">
             <ul class="top_nav">
               <li><a href="index.html">Home</a></li>
               <li><a href="#" data-toggle="modal" data-target="#login-modal">About</a></li>
               <li><a href=<?php echo base_url()."assets/";?>"pages/contact.html">Contact</a></li>
-              <li class="col-md-12"><p ></p></li>
-              <right><li ><a href="#" data-toggle="modal" data-target="#login-modal">About</a></li></right>
             </ul>
+          </div>
+          <div class="header_top_right">
+          
+              <a href="index.html">Home</a>
+              <a href="#">About</a>
+              <a href=<?php echo base_url()."assets/";?>"pages/contact.html">Contact</a>
             
-          
-          
         </div>
-
+        </div>
+   
     <!-- logo pencarian dan login -->
 
     <!-- logo pencarian dan login -->
@@ -114,7 +117,7 @@
           <li>
             <div class="imgholder"><img width="115px" height="115px" src="<?php echo base_url(); ?>gambar/berita/<?php echo $berita->img;?>" alt="" /></div>
             <div class="latestnews">
-            <p><?php echo $berita->waktu; ?>, <?php echo $berita->nama_lengkap; ?></p>
+            <p><?php echo $berita->waktu; ?>, <?php echo $berita->username_admin; ?></p>
               <a href=""><h2><?php echo $berita->judul_berita; ?></h2></a>
               <p><?php echo $berita->isi_berita; ?></p>
               <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
@@ -226,7 +229,7 @@
 <!-- bagian bawah-->
   <footer id="footer">
     <div class="footer_top">
-      <div class="row"">
+      <div class="row">
         
       </div>
     </div>
@@ -235,8 +238,7 @@
       <p class="developer">Dikembangkan oleh Kelompok 7</p>
     </div>
   </footer>
-  <!-- bagian bawah-- >
-
+  <!-- bagian bawah-->
 <script src="<?php echo base_url()."assets/";?>js/jquery.min.js"></script> 
 <script src="<?php echo base_url()."assets/";?>js/wow.min.js"></script> 
 <script src="<?php echo base_url()."assets/";?>js/bootstrap.min.js"></script> 
@@ -246,8 +248,6 @@
 <script src="<?php echo base_url()."assets/";?>js/jquery.fancybox.pack.js"></script> 
 <script src="<?php echo base_url()."assets/";?>js/custom.js"></script>
 <script src="<?php echo base_url()."assets/";?>js/login.js"></script>
-
-
 <!-- BEGIN # MODAL LOGIN -->
 <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
       <div class="modal-dialog">
@@ -340,6 +340,5 @@
     </div>
   </div>
     <!-- END # MODAL LOGIN -->
-
 </body>
 </html>
