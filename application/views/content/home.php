@@ -134,7 +134,7 @@
         </ul>
     <!-- bagian kanan -->
       
-      <div class="col-lg-7 col-md-5 col-sm-10">
+      <div class="col-lg-7 col-md-5 col-sm-5">
         <div class="right_content">
           <h2><span>Informasi Seputar Kampanye</span></h2>
             <div id="prev-button"><i class="fa fa-chevron-up"></i></div>
