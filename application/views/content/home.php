@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>JawaraNews.com</title>
+<title>NewsFeed</title>
 <meta charset="utf-8">
 
 <!-- css -->
@@ -93,57 +93,52 @@
 
         </div>
       </div>
-	  </section>
+    </section>
     <!-- Bagian baris berita utam image slider -->
-	  
+    
   
   <!-- Bagian konten halaman utama -->
   <section id="contentSection">
  
-	<!-- bagian kiri -->
+  <!-- bagian kiri -->
     <div class="row">
       <div class="col-lg-8 col-md-8 col-sm-8">
         <div class="left_content">
           <div class="single_post_content">
             
             <h2><span></span></h2>
-
-
 <div id="latestnews">
         <h2>Berita</h2>
-        <?php
-          $waktu="23:00 WIB, 18 Januari 2017 | JawaraNews";
-          $op="";
-          $judul="Agus & Sylvi Membuat Aplikasi Demi Mengantisipasi Kecurangan";
-          $isi="Jakarta - Pasangan nomor urut 1 di Pilgub DKI 2017, Agus Yudhoyono-Sylviana Murni membuat aplikasi berbasis IT untuk mengantisipasi kecurangan menjelang proses pencoblosan. Aplikasi tidak hanya ditujukan untuk relawan melainkan juga warga pada umumnya.";
-        ?>
+        
         <ul>
-        <?php for($i = 0; $i < 6; $i++) {?>
+        <?php foreach ($query_berita->result() as $berita) { ?>
+          
+        
           <li>
-            <div class="imgholder"><img src="images/demo/imgl.gif" alt="" /></div>
-              <p><?php echo $waktu;?></p>
-              <p><?php echo $op;?></p>
-              <h2><?php echo $judul;?></h2>
-              <p><?php echo $isi;?></p>
+            <div class="imgholder"><img width="115px" height="115px" src="<?php echo base_url(); ?>gambar/berita/<?php echo $berita->img;?>" alt="" /></div>
+            <div class="latestnews">
+            <p><?php echo $berita->waktu; ?>, <?php echo $berita->username_admin; ?></p>
+              <a href=""><h2><?php echo $berita->judul_berita; ?></h2></a>
+              <p><?php echo $berita->isi_berita; ?></p>
               <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
             </div>
             <br class="clear" />
           </li>
-          <?php }?>
+          <?php } ?>
         </ul>
       </div>
     </div>
               </div>
         </div>
-      	  <!-- bagian kiri -->
+          <!-- bagian kiri -->
 
 
-	  <!-- bagian kanan -->
+    <!-- bagian kanan -->
       <div class="col-lg-4 col-md-4 col-sm-4">
         <aside class="right_content">
           
-		  
-		   
+      
+       
     
         
           <h3><span>Informasi Seputar Kampanye</span></h3>
@@ -154,10 +149,12 @@
             <div id="prev-button"><i class="fa fa-chevron-up"></i></div>
 
             <ul class="latest_postnav">
-            <?php for($u = 0; $u < 5; $u++) {?>
+            <?php foreach ($query_kampanye->result() as $kampanye) { ?>
+             
+            
               <li>
                 <div class="media"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="<?php echo base_url()."assets/";?>images/post_img1.jpg"> </a>
-                  <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius <?php echo $u?></a> </div>
+                  <div class="media-body"> <a href="pages/single_page.html" class="catg_title"><?php echo $kampanye->nama;?> akan melakukan kampanye pada <?php echo $kampanye->jadwal_kampanye; ?> di <?php echo $kampanye->lokasi_kampanye; ?></a> </div>
                 </div>
               </li>
               <?php }?>
@@ -169,7 +166,7 @@
    
       
   
-		  
+      
           <div class="single_sidebar">
             <ul class="nav nav-tabs" role="tablist">
               <li role="presentation" class="active"><a href="#category" aria-controls="home" role="tab" data-toggle="tab">Category</a></li>
