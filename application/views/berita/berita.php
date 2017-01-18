@@ -53,6 +53,8 @@ foreach($sql->result() as $obj){
 
                 <!-- Blog Comments -->
 
+                
+
                 <!-- Comments Form -->
                 <div class="well">
                     <h4>Leave a Comment:</h4>
@@ -79,7 +81,7 @@ foreach($sql->result() as $obj){
                     <!-- Contenedor del Comentario -->
                     <div class="comment-box">
                         <div class="comment-head">
-                            <h6 class="comment-name"><a href="#"><?php echo $kom->id_pengguna; ?></a></h6>
+                            <h6 class="comment-name"><a href="#"><?php echo $kom->nama_lengkap; ?></a></h6>
                             <span><?php echo $kom->waktu; ?></span>
                             <i class="fa fa-reply"></i>
                             <i class="fa fa-heart"></i>

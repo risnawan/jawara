@@ -120,7 +120,7 @@
             <p><?php echo $berita->waktu; ?>, <?php echo $berita->username_admin; ?></p>
               <a href=""><h2><?php echo $berita->judul_berita; ?></h2></a>
               <p><?php echo $berita->isi_berita; ?></p>
-              <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
+              <p class="readmore"><a href="<?php echo base_url();?>halamanberita/berita/<?php echo $berita->id_berita;?>">Continue Reading &raquo;</a></p>
             </div>
             <br class="clear" />
           </li>
@@ -229,7 +229,7 @@
 <!-- bagian bawah-->
   <footer id="footer">
     <div class="footer_top">
-      <div class="row"">
+      <div class="row">
         
       </div>
     </div>
