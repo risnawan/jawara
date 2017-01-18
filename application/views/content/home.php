@@ -102,30 +102,61 @@
  
   <!-- bagian kiri -->
     <div class="row">
-      <div class="col-lg-8 col-md-8 col-sm-8">
+      <div class="col-lg-7 col-md-5 col-sm-13">
         <div class="left_content">
           <div class="single_post_content">
+<<<<<<< HEAD
+         
+            <h2><span>Berita Terkini</span></h2>
+
+
+<div id="latestnews">
+        <?php
+          $waktu= "20:15 WIB, 13 Januari 2017 | JawaraNews";
+          $op= "";
+          $judul= "Debat Pilkada Cagub Menghebohkan Warga Jakarta";
+          $isi= "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaabbbbmdlmgkdnj gfshdsjfnadnfjdnfkdnafknadfnk
+          andfkdnfkndsf ndsnfdsnv dnfkendfds vmcvjdsbfkasnfdksbfafeifnjdv djfbebfd vm vjdbfafsdmacks
+          nfknsaklfnkasncdx vdjaf adv djv kdfdsfdsfsd ewfdfdasdfsd sfsdfsdsfd cairo_status(sfsfsfs m 
+          dfsdfs df s)fsdfsdfdfnqjndsnfjkebnd  dnnfdkalnf dnklafak fndkl fa,mfnakf esacsacsascacacac
+          ascascascascacsaccsacacacsacdbf fbfdbv fbfbvd dfsdvsc fv dfbd fbdfgsdfsbvf dbd dbfgfdsvdfg";
+        ?>
+=======
             
             <h2><span></span></h2>
 <div id="latestnews">
         <h2>Berita</h2>
         
+>>>>>>> refs/remotes/origin/master
         <ul>
         <?php foreach ($query_berita->result() as $berita) { ?>
           
         
           <li>
+<<<<<<< HEAD
+            <div class="imgholder"><img src="images/demo/imgl.gif" alt="" /></div>
+              <p><?php echo $waktu;?></p>
+              <p><?php echo $op;?></p>
+              <h3><?php echo $judul;?></h3>
+              <p><?php echo $isi;?></p>
+=======
             <div class="imgholder"><img width="115px" height="115px" src="<?php echo base_url(); ?>gambar/berita/<?php echo $berita->img;?>" alt="" /></div>
             <div class="latestnews">
             <p><?php echo $berita->waktu; ?>, <?php echo $berita->username_admin; ?></p>
               <a href=""><h2><?php echo $berita->judul_berita; ?></h2></a>
               <p><?php echo $berita->isi_berita; ?></p>
+>>>>>>> refs/remotes/origin/master
               <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
-            </div>
-            <br class="clear" />
           </li>
           <?php } ?>
         </ul>
+<<<<<<< HEAD
+    <!-- bagian kanan -->
+      
+      <div class="col-lg-7 col-md-5 col-sm-5">
+        <div class="right_content">
+          <h2><span>Informasi Seputar Kampanye</span></h2>
+=======
       </div>
     </div>
               </div>
@@ -146,8 +177,9 @@
 
           <div class="latest_post_container">
 
+>>>>>>> refs/remotes/origin/master
             <div id="prev-button"><i class="fa fa-chevron-up"></i></div>
-
+              <div class="latest_post_container">
             <ul class="latest_postnav">
             <?php foreach ($query_kampanye->result() as $kampanye) { ?>
              
