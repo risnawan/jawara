@@ -9,6 +9,9 @@ class Halamanberita extends CI_Controller {
         /*if($this->session->userdata('status') != "login"){
 			redirect('Admin');
 		}*/
+
+
+
     }
 
 	public function index()
@@ -21,13 +24,17 @@ class Halamanberita extends CI_Controller {
 		$this->load->view('berita/footer');
 	}
 
-	public function berita($id)
+	public function berita($id=1)
 	{
 		//$query = $this->m_halamanberita->getkomentar($id);
 
 		//$data = array(
 		//	"komentar" => $this->load->view("berita/komentar", compact('query'), true),
 		//);
+
+
+
+
 
 		$data['content'] = 'berita/seputarkampanye';
 		$data['tuliskometar'] = 'berita/tinggalkankomentar';
@@ -42,26 +49,37 @@ class Halamanberita extends CI_Controller {
 
 	public function tinggalpesan()
 	{
+		$id_pengguna = '1';
+		$id_komentar = '3';
+		$id_berita = '1';
+		$isi_komentar = $this->input->post('isi_komentar');
+		$waktu = 'now()';
+		$data = array(
+			'id_pengguna'=>$id_pengguna,
+			'id_komentar'=>$id_komentar,
+			'id_berita'=>$id_berita,
+			'isi_komentar'=>$isi_komentar,
+			'waktu'=>$waktu);
+		$this->m_halamanberita->insertkomentar($data);
+		
+		Redirect('http://localhost/jawara/halamanberita/berita/1', false);
+
 		//$key  = $this->input->post('id_berita');
-		$data['id_pengguna']= $this->input->post('username_admin');
-		$data['id_komentar']= $this->input->post('judul_berita');
-		$data['id_berita']= $this->input->post('tanggal_berita');
-		$data['isi_komentar']= $this->input->post('isi_berita');
-		$data['waktu']= $this->input->post('isi_berita');
+		//$data['id_pengguna']= $this->input->post('id_pengguna');
+		//$data['id_komentar']= $this->input->post('id_komentar');
+		//$data['id_berita']= $this->input->post('id_berita');
+		/*$data['id_pengguna']= 1;
+		$data['id_komentar']= 3;
+		$data['id_berita']= 1;
+		$data['waktu']= 'now()'	;
 		
-
+		$data['isi_komentar']= $this->input->post('isi_komentar');
+		//$data['waktu']= $this->input->post('waktu');
 		
-		$query = $this->m_berita->getdata($key);
-	
-		if ($query->num_rows()>0) {
-			$this->m_berita->getupdate($key,$data);
-		}
-		else
-		{
-			$this->m_berita->getinsert($data);
-		}
+		$this->m_halamanberita->insertkomentar($data);
 
-		redirect('berita/add');
+
+		Redirect('http://localhost/jawara/halamanberita/berita/1', false);*/
 	}
 
 
