@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>NewsFeed</title>
+<title>JawaraNews.com</title>
 <meta charset="utf-8">
 
 <!-- css -->
@@ -42,13 +42,19 @@
               <li><a href="index.html">Home</a></li>
               <li><a href="#" data-toggle="modal" data-target="#login-modal">About</a></li>
               <li><a href=<?php echo base_url()."assets/";?>"pages/contact.html">Contact</a></li>
+              <?php if ($this->session->userdata('status')=='user_login'): ?>
+                <li><a href="<?php echo base_url();?>home/logout">Logout</a></li>
+              <?php endif ?>
+              <?php if ($this->session->userdata('status')!='user_login'): ?>
+                <li><a href="<?php echo base_url();?>login">Login</a></li>
+              <?php endif ?>
             </ul>
           </div>
           <div class="header_top_right">
-          
-              <a href="index.html">Home</a>
-              <a href="#">About</a>
-              <a href=<?php echo base_url()."assets/";?>"pages/contact.html">Contact</a>
+          <div></div>
+              <?php if ($this->session->userdata('status')=='user_login'): ?>
+                <h3>Welcome,<?php echo $this->session->userdata('nama');?></h3>
+              <?php endif ?>
             
         </div>
         </div>
