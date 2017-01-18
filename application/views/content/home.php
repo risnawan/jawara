@@ -37,22 +37,19 @@
     <div class="row">
       
         <div class="header_top">
-          <div class="header_top_left">
+          
             <ul class="top_nav">
               <li><a href="index.html">Home</a></li>
               <li><a href="#" data-toggle="modal" data-target="#login-modal">About</a></li>
               <li><a href=<?php echo base_url()."assets/";?>"pages/contact.html">Contact</a></li>
+              <li class="col-md-12"><p ></p></li>
+              <right><li ><a href="#" data-toggle="modal" data-target="#login-modal">About</a></li></right>
             </ul>
-          </div>
-          <div class="header_top_right">
-          
-              <a href="index.html">Home</a>
-              <a href="#">About</a>
-              <a href=<?php echo base_url()."assets/";?>"pages/contact.html">Contact</a>
             
+          
+          
         </div>
-        </div>
-   
+
     <!-- logo pencarian dan login -->
 
     <!-- logo pencarian dan login -->
@@ -117,7 +114,7 @@
           <li>
             <div class="imgholder"><img width="115px" height="115px" src="<?php echo base_url(); ?>gambar/berita/<?php echo $berita->img;?>" alt="" /></div>
             <div class="latestnews">
-            <p><?php echo $berita->waktu; ?>, <?php echo $berita->username_admin; ?></p>
+            <p><?php echo $berita->waktu; ?>, <?php echo $berita->nama_lengkap; ?></p>
               <a href=""><h2><?php echo $berita->judul_berita; ?></h2></a>
               <p><?php echo $berita->isi_berita; ?></p>
               <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>

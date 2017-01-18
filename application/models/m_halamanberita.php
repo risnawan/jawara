@@ -11,6 +11,14 @@ class M_halamanberita extends CI_Model {
 		$hasil = $this->db->get();
 		return $hasil;
 	}
+	public function getallberita(){
+		$this->db->select('*');
+		$this->db->from('berita');
+		$this->db->join('admin', 'berita.username_admin = admin.username_admin');
+		
+		$hasil = $this->db->get();
+		return $hasil;
+	}
 
 	public function getkomentar($key){
 		$this->db->where('id_berita',$key);
