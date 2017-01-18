@@ -238,8 +238,7 @@
       <p class="developer">Dikembangkan oleh Kelompok 7</p>
     </div>
   </footer>
-  <!-- bagian bawah-- >
-
+  <!-- bagian bawah-->
 <script src="<?php echo base_url()."assets/";?>js/jquery.min.js"></script> 
 <script src="<?php echo base_url()."assets/";?>js/wow.min.js"></script> 
 <script src="<?php echo base_url()."assets/";?>js/bootstrap.min.js"></script> 
@@ -249,8 +248,6 @@
 <script src="<?php echo base_url()."assets/";?>js/jquery.fancybox.pack.js"></script> 
 <script src="<?php echo base_url()."assets/";?>js/custom.js"></script>
 <script src="<?php echo base_url()."assets/";?>js/login.js"></script>
-
-
 <!-- BEGIN # MODAL LOGIN -->
 <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
       <div class="modal-dialog">
@@ -343,6 +340,5 @@
     </div>
   </div>
     <!-- END # MODAL LOGIN -->
-
 </body>
 </html>
