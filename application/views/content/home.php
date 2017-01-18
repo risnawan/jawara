@@ -238,7 +238,7 @@
       <p class="developer">Dikembangkan oleh Kelompok 7</p>
     </div>
   </footer>
-  <!-- bagian bawah-->
+  <!-- bagian bawah-- >
 
 <script src="<?php echo base_url()."assets/";?>js/jquery.min.js"></script> 
 <script src="<?php echo base_url()."assets/";?>js/wow.min.js"></script> 

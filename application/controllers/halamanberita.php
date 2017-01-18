@@ -62,7 +62,7 @@ class Halamanberita extends CI_Controller {
 			'waktu'=>$waktu);
 		$this->m_halamanberita->insertkomentar($data);
 		
-		Redirect('http://localhost/jawara/halamanberita/berita/1', false);
+		Redirect('halamanberita/berita/1', false);
 
 		//$key  = $this->input->post('id_berita');
 		//$data['id_pengguna']= $this->input->post('id_pengguna');
