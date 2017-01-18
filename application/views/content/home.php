@@ -12,6 +12,7 @@
 
 <link rel="stylesheet" type="text/css" href="<?php echo base_url()."assets/";?>css/style.css">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url()."assets/";?>css/login.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url()."assets/";?>css/header.css">
 
 <!-- css -->
 
@@ -33,57 +34,17 @@
     <div class="row">
       
 <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="<?php echo base_url();?>">JawaraNews.com</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <!--
-                    <li>
-                        <a href="<?php echo base_url();?>">Home</a>
-                    </li>
-                    -->
-                    <li>
-                        <form class="navbar-form" role="search">
-                            <div class="input-group">
-                                <input type="text" class="form-control">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-default" type="button">
-                                        <span class="glyphicon glyphicon-search"></span>
-                                    </button>
-                                </span>
-                            </div>
-                        </form>
-                    </li>
-                    <li>
-
-                      <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#login-modal">Sign in</button>
-                    </li>
-
-                </ul>
-
-            </div>
-
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
+    <header>
+  <div class="inner">
+    <nav>
+      <a href="#" class="logo">JawaraNews.com</a>
+      <input type="checkbox" id="nav" /><label for="nav"></label>
+      <ul>
+        <li><a class="btn btn-success btn-xs" role="button" href="<?php echo base_url();?>index.php/admin"><h4>-     Login     -</h4></a></li>
+      </ul>
     </nav>
-    <br>
-   
-    <!-- logo pencarian dan login -->
-
-    <!-- logo pencarian dan login -->
-
+  </div>
+</header>  
 
   <!-- Bagian baris berita utam image slider -->
   <section id="sliderSection">
