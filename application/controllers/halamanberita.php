@@ -50,20 +50,21 @@ class Halamanberita extends CI_Controller {
 
 	public function tinggalpesan()
 	{
-		$id_pengguna = '1';
-		$id_komentar = '3';
-		$id_berita = '1';
+		$id_pengguna = $this->input->post('id_pengguna');
+		$path= $this->input->post('path');
+		
+		$id_berita = $this->input->post('id_berita');;
 		$isi_komentar = $this->input->post('isi_komentar');
 		$waktu = 'now()';
 		$data = array(
 			'id_pengguna'=>$id_pengguna,
-			'id_komentar'=>$id_komentar,
+			
 			'id_berita'=>$id_berita,
 			'isi_komentar'=>$isi_komentar,
 			'waktu'=>$waktu);
 		$this->m_halamanberita->insertkomentar($data);
 		
-		Redirect('halamanberita/berita/1', false);
+		redirect($path);
 
 		//$key  = $this->input->post('id_berita');
 		//$data['id_pengguna']= $this->input->post('id_pengguna');

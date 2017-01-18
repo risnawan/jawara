@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>JawareNews.com</title>
+<title>JawaraNews.com</title>
+
 <meta charset="utf-8">
 
 <!-- css -->
@@ -32,31 +33,31 @@
  
     <div class="row">
       
-<!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="<?php echo base_url();?>">JawaraNews.com</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <!--
-                    <li>
-                        <a href="<?php echo base_url();?>">Home</a>
-                    </li>
-                    -->
-                 
-                    <li>
-                      <a class="btn" href="<?php echo base_url();?>">LOGIN</a>
-                    </li>
+
+        <div class="header_top">
+          <div class="header_top_left">
+            <ul class="top_nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#" data-toggle="modal" data-target="#login-modal">About</a></li>
+              <li><a href=<?php echo base_url()."assets/";?>"pages/contact.html">Contact</a></li>
+              <?php if ($this->session->userdata('status')=='user_login'): ?>
+                <li><a href="<?php echo base_url();?>home/logout">Logout</a></li>
+              <?php endif ?>
+              <?php if ($this->session->userdata('status')!='user_login'): ?>
+                <li><a href="<?php echo base_url();?>login">Login</a></li>
+              <?php endif ?>
+            </ul>
+          </div>
+          <div class="header_top_right">
+          <div></div>
+              <?php if ($this->session->userdata('status')=='user_login'): ?>
+                <h3>Welcome,<?php echo $this->session->userdata('nama');?></h3>
+              <?php endif ?>
+            
+        </div>
+        </div>
+   
+    <!-- logo pencarian dan login -->
 
                 </ul>
 

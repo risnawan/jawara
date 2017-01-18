@@ -5,6 +5,7 @@
     $penulis="";
     $foto="";
     $isi="";
+    $id_berita='';
 
 foreach($sql->result() as $obj){
     $judul=$obj->judul_berita;
@@ -12,6 +13,7 @@ foreach($sql->result() as $obj){
     $penulis=$obj->nama_lengkap;
     $foto=$obj->foto;
     $isi=$obj->isi_berita;
+    $id_berita=$obj->id_berita;
     }
 
 ?>
@@ -59,7 +61,17 @@ foreach($sql->result() as $obj){
                 <div class="well">
                     <h4>Leave a Comment:</h4>
 
-                    <?php $this->load->view($tuliskometar); ?>
+                    <form role="form" method="POST" action="<?php echo base_url();?>halamanberita/tinggalpesan">
+                        <div class="form-group">
+                            <input type ="hidden" value="<?php echo $this->uri->uri_string(); ?>" name="path">
+                            <input type ="hidden" value="<?php echo $this->session->userdata('id'); ?>" name="id_pengguna">
+                            <input type ="hidden" value="<?php echo $id_berita; ?>" name="id_berita">
+                            <textarea class="form-control" rows="3" name="isi_komentar"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<br>
+<?php echo "ini untuk tinggalkan komentar"?>
 
                 </div>
 
