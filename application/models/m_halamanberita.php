@@ -11,6 +11,7 @@ class M_halamanberita extends CI_Model {
 		$hasil = $this->db->get();
 		return $hasil;
 	}
+
 	public function getallberita(){
 		$this->db->select('*');
 		$this->db->from('berita');
@@ -32,7 +33,7 @@ class M_halamanberita extends CI_Model {
 				pengguna.nama_lengkap,
 				pengguna.email,
 				pengguna.foto,
-				pengguna.`password`,
+				pengguna.password,
 				pengguna.id_pengguna,
 				berita.id_berita,
 				berita.username_admin,
